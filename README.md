@@ -1,7 +1,8 @@
 module-api-tests
 ================
 
-exploring side-effects, anti-patterns in the commonjs exports api.
+Explores side-effects, anti-patterns in the commonjs exports api, because some 
+things just can't be assumed.
 
 tests
 -----
