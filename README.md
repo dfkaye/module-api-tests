@@ -11,7 +11,8 @@ View the test page on
    target='_new' title='opens new window or tab'>rawgithub</a>.
       
 
-__module.exports === exports === this ...__
+module.exports === exports === this ...
+---------------------------------------
 
 ...unless you overwrite or reassign module.exports or exports to another object.
 
@@ -68,6 +69,7 @@ The testem.json file defines a custom test page to run jasmine tests in browsers
     testem -l jasmine-node
   
 ... and using the <code>before_tests</code> hook to run <code>browserify</code>.
+
 
 browserify
 ----------
