@@ -14,33 +14,33 @@ View the test page on
 module.exports === exports === this ...
 ---------------------------------------
 
-...unless you overwrite or reassign module.exports or exports to another object.
+__...unless you overwrite or reassign module.exports or exports:__
 
-overwrite module.exports, assign attrs to exports and/or this:
++ overwrite module.exports, assign attrs to exports and/or this:
 
     module.exports = { name: 'module.exports' };
     
     exports.name = 'exports';
     this.name ='this';
 
-overwrite exports, assign attrs to module.exports and/or this:
++ overwrite exports, assign attrs to module.exports and/or this:
 
     module.exports.name = 'module.exports';
     exports = { name: exports' };
     this.name ='this';
     
-*module.exports wins in both cases:*
+__module.exports wins in both cases:__
 
     require('module-test').name === 'module.exports';
 
     
-adding attributes to this, exports or module-exports:
++ adding attributes to this, exports or module-exports:
 
     module.exports.name = 'module.exports';
     exports.name = 'exports';
     this.name ='this';
     
-*last assignment wins:*
+__last assignment wins:__
 
     require('assignment').name === 'this';
 
