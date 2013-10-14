@@ -3,9 +3,12 @@ module-api-tests
 
 explores interesting side-effects and anti-patterns in the exports api
 
+tests
+-----
+
 View the test page on 
-<a href='https://rawgithub.com/dfkaye/module-api-tests/master/index.html' target='_new'
-      title='opens new window or tab'>rawgithub</a>
+<a href='https://rawgithub.com/dfkaye/module-api-tests/master/test.html' 
+   target='_new' title='opens new window or tab'>rawgithub</a>.
       
 
 __module.exports === exports === this ...__
@@ -79,7 +82,7 @@ rawgithub
 ---------
 
 The custom test page can be viewed on 
-<a href='https://rawgithub.com/dfkaye/module-api-tests/master/index.html' 
+<a href='https://rawgithub.com/dfkaye/module-api-tests/master/test.html' 
    target='_new' title='opens new window or tab'>rawgithub</a>, 
 Ryan Grove's (@yaypie) invaluable service for remote viewing your repo's html in 
 a browser so you don't have to run a server locally.
