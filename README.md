@@ -1,7 +1,7 @@
 module-api-tests
 ================
 
-explores interesting side-effects and anti-patterns in the exports api
+exploring side-effects, anti-patterns in the commonjs exports api.
 
 tests
 -----
@@ -16,16 +16,17 @@ module.exports === exports === this ...
 
 __...unless you overwrite or reassign module.exports or exports:__
 
-+ overwrite module.exports, assign attrs to exports and/or this:
+overwrite module.exports, assign attrs to exports and/or this:
 
     module.exports = { name: 'module.exports' };
     
     exports.name = 'exports';
     this.name ='this';
 
-+ overwrite exports, assign attrs to module.exports and/or this:
+overwrite exports, assign attrs to module.exports and/or this:
 
     module.exports.name = 'module.exports';
+    
     exports = { name: exports' };
     this.name ='this';
     
@@ -34,7 +35,7 @@ __module.exports wins in both cases:__
     require('module-test').name === 'module.exports';
 
     
-+ adding attributes to this, exports or module-exports:
+adding attributes to this, exports or module-exports:
 
     module.exports.name = 'module.exports';
     exports.name = 'exports';
