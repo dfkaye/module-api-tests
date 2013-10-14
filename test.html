@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>module-api-tests</title>
+  <link rel="stylesheet" href="lib/jasmine-1.3.1/jasmine.css">
+  <script src="lib/jasmine-1.3.1/jasmine.js"></script>
+  <script>if (location.href.indexOf('://localhost:7357') != - 1) {
+    document.write('<script src="/testem.js">' + '<\/' + 'script>');
+  }</script>
+  <script src="lib/jasmine-1.3.1/jasmine-html.js"></script>
+  <script>
+    (function() {
+      var jasmineEnv = jasmine.getEnv()
+      jasmineEnv.addReporter(new jasmine.HtmlReporter)
+      window.onload = function() {
+        jasmineEnv.execute()
+      };
+    })();
+  </script>
+  <script src="test/bundle.spec.js"></script>
+  </head>
+<body>
+  <div id="jasmine_content"></div>
+</body>
+</html>

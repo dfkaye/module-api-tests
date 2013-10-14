@@ -1,0 +1,22 @@
+{
+  "name": "module-api-tests",
+  "version": "0.0.0",
+  "description": "explores interesting side-effects and anti-patterns in the exports api",
+  "homepage" : "https://github.com/dfkaye/module-api-tests",
+  "author": {
+    "name": "david kaye (@dfkaye)",
+    "email" : "dfkaye@yahoo.com"
+  },
+  "devDependencies": {
+    "jasmine-node": "~1.0.0",
+    "browserify": "~1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dfkaye/module-api-tests.git"
+  },
+  "scripts": {
+    "test": "jasmine-node --verbose ./test/",
+    "bundle" : "browserify ./test/suite.spec.js > ./test/bundle.spec.js"
+  }
+}

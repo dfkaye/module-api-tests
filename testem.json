@@ -1,0 +1,13 @@
+{
+  "framework": "jasmine",
+  "test_page" : "test.html",
+  "src_files" : [
+    "test/bundle.spec.js"
+  ],
+  "before_tests": "browserify ./test/suite.spec.js > ./test/bundle.spec.js",
+  "launchers": {
+    "jasmine-node": {
+      "command": "jasmine-node --verbose ./test/"
+    }
+  }
+}
