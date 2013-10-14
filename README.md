@@ -3,8 +3,12 @@ module-api-tests
 
 explores interesting side-effects and anti-patterns in the exports api
 
-module.exports === exports === this ...
----------------------------------------
+View the test page on 
+<a href='https://rawgithub.com/dfkaye/module-api-tests/master/index.html' target='_new'
+      title='opens new window or tab'>rawgithub</a>
+      
+
+__module.exports === exports === this ...__
 
 ...unless you overwrite or reassign module.exports or exports to another object.
 
@@ -40,7 +44,8 @@ adding attributes to this, exports or module-exports:
 jasmine-node
 ------------
 
-misko hevery's fine jasmine-node module was used to drive these tests initially.
+Misko Hevery's (mhevery) [jasmine-node](https://github.com/mhevery/jasmine-node) 
+package was used to drive these tests initially.
 
     jasmine-node --verbose ./test/
 
@@ -48,24 +53,24 @@ misko hevery's fine jasmine-node module was used to drive these tests initially.
 testem
 ------
 
-toby ho's magnificent testem package was used to drive these tests in the 
-browser as well as on node.  
+Toby Ho's (@airporty) [testem](https://github.com/airportyh/testem) package was 
+used to drive these tests in the browser as well as on node.  
 
-testem.json defines a custom test page to run jasmine tests in browser
+The testem.json file defines a custom test page to run jasmine tests in browsers
 
     testem 
     
-and defines a launcher for jasmine-node
+...and defines a launcher for jasmine-node:
 
     testem -l jasmine-node
   
-uses before_tests hook to run browserify
-
+... and using the <code>before_tests</code> hook to run <code>browserify</code>.
 
 browserify
 ----------
 
-james halliday's nice node-to-browser src file bundler
+James Halliday's (@substack) node-to-browser source bundler utility, 
+[browserify](https://github.com/substack/node-browserify):
 
     browserify ./test/suite.spec.js > ./test/bundle.spec.js
 
@@ -73,9 +78,11 @@ james halliday's nice node-to-browser src file bundler
 rawgithub
 ---------
 
-The custom test page can be viewed on rawgithub, ryan grove's invaluable service 
-for remoting your repo's html into a browser so your friends and family can view 
-the page).  
+The custom test page can be viewed on 
+<a href='https://rawgithub.com/dfkaye/module-api-tests/master/index.html' 
+   target='_new' title='opens new window or tab'>rawgithub</a>, 
+Ryan Grove's (@yaypie) invaluable service for remote viewing your repo's html in 
+a browser so you don't have to run a server locally.
 
-The testem script does not execute on rawgithub, only the jasmine and test 
-scripts in the browserified bundle.
+(Note: The testem script does not execute on rawgithub, only the jasmine and test 
+scripts in the browserified bundle.)
