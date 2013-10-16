@@ -158,11 +158,11 @@ describe('module-exports assignment', function () {
 
     var m = require('./overwritten-module-exports');
 
-    it('should be module.exports', function () {
+    it('should be \'module.exports\'', function () {
         expect(m.name).toBe('module.exports');
     });
     
-    it('should not be exports', function () {
+    it('should not be \'exports\'', function () {
         expect(m.name).not.toBe('exports');
     });
     
@@ -180,35 +180,54 @@ describe('require an overwritten exports', function () {
     });   
 });
 
-describe('require exports before this', function () {
+describe('require exports modified last', function () {
 
     var m = require('./exports-last');
     
-    it('should return exports first', function () {
+    it('should return \'exports last\'', function () {
         expect(m.name).toBe('exports last');
     });   
 });
 
-describe('require this before exports', function () {
+describe('require this modified last', function () {
 
     var m = require('./this-last');
     
-    it('should return an empty object', function () {
+    it('should return \'this last\'', function () {
         expect(m.name).toBe('this last');
     });   
 });
-},{"./exports-last":1,"./overwritten-exports":4,"./overwritten-module-exports":5,"./this-last":8}],7:[function(require,module,exports){
+
+describe('return-vs-exports from a module file', function () {
+
+    var m = require('./return-vs-exports');
+    
+    describe('deleting module.exports', function () {
+        it('should not export the return value', function () {
+            expect(m).not.toBeDefined();
+        });
+    });
+});
+},{"./exports-last":1,"./overwritten-exports":4,"./overwritten-module-exports":5,"./return-vs-exports":7,"./this-last":9}],7:[function(require,module,exports){
+// return-vs-exports
+
+delete module.exports;
+return 'return'
+},{}],8:[function(require,module,exports){
+// suite.spec.js
+
 require ('./module-api-spec');
 require ('./module-spec');
 require ('./require-spec');
 
 
 
-},{"./module-api-spec":2,"./module-spec":3,"./require-spec":6}],8:[function(require,module,exports){
+
+},{"./module-api-spec":2,"./module-spec":3,"./require-spec":6}],9:[function(require,module,exports){
 // this-last
 
 exports.name = 'exports first';
 this.name = 'this last';
 
-},{}]},{},[7])
+},{}]},{},[8])
 ;
