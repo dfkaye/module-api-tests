@@ -16,7 +16,7 @@
     "url": "git://github.com/dfkaye/module-api-tests.git"
   },
   "scripts": {
-    "test": "jasmine-node --verbose ./test/",
-    "bundle" : "browserify ./test/suite.spec.js > ./test/bundle.spec.js"
+    "test": "jasmine-node --verbose ./test/suite",
+    "bundle" : "browserify ./test/suite.spec.js > ./test/bundle-spec.js"
   }
 }
