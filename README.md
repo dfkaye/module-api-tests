@@ -61,7 +61,7 @@ jasmine-node
 Misko Hevery's (mhevery) [jasmine-node](https://github.com/mhevery/jasmine-node) 
 package was used to drive these tests initially.
 
-    jasmine-node --verbose ./test/
+    jasmine-node --verbose ./test/suite.spec.js
 
     
 testem
@@ -87,7 +87,7 @@ browserify
 James Halliday's (@substack) node-to-browser source bundler utility, 
 [browserify](https://github.com/substack/node-browserify):
 
-    browserify ./test/suite.spec.js > ./test/bundle.spec.js
+    browserify ./test/suite.spec.js > ./test/bundle-spec.js
 
 ... is used to generated the html-only version of all the javascript tests used 
 by both testem and viewable in a standalone page on rawgithub.
