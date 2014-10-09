@@ -51,8 +51,8 @@ tests
 -----
 
 View the generated test page on 
-<a href='https://rawgithub.com/dfkaye/module-api-tests/master/test.html' 
-   target='_new' title='opens new window or tab'>rawgithub</a>.
+<a href='https://rawgit.com/dfkaye/module-api-tests/master/test.html' 
+   target='_new' title='opens new window or tab'>rawgit</a>.
       
 
 jasmine-node
@@ -90,17 +90,17 @@ James Halliday's (@substack) node-to-browser source bundler utility,
     browserify ./test/suite.spec.js > ./test/bundle-spec.js
 
 ... is used to generated the html-only version of all the javascript tests used 
-by both testem and viewable in a standalone page on rawgithub.
+by both testem and viewable in a standalone page on rawgit.
 
 
-rawgithub
+rawgit
 ---------
 
 The custom test page can be viewed on 
-<a href='https://rawgithub.com/dfkaye/module-api-tests/master/test.html' 
-   target='_new' title='opens new window or tab'>rawgithub</a>, 
+<a href='https://rawgit.com/dfkaye/module-api-tests/master/test.html' 
+   target='_new' title='opens new window or tab'>rawgit</a>, 
 Ryan Grove's (@yaypie) invaluable service for remote viewing your repo's html in 
 a browser so you don't have to run a server locally.
 
-(Note: The testem script does not execute on rawgithub, only the jasmine and test 
+(Note: The testem script does not execute on rawgit, only the jasmine and test 
 scripts in the browserified bundle.)
